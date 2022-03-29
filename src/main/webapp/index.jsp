@@ -274,8 +274,8 @@
         var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href", "#"));
         // 添加首页、末页、上一页、下一页禁用 和跳转功能
         if (result.extend.pageInfo.hasPreviousPage == false) {
-            firstPageLi.addClass("disable")
-            prePageLi.addClass("disable")
+            firstPageLi.addClass("disabled")
+            prePageLi.addClass("disabled")
         } else {
             firstPageLi.click(function () {
                 to_page(1)
@@ -285,8 +285,8 @@
             })
         }
         if (result.extend.pageInfo.hasNextPage == false) {
-            nextPageLi.addClass("disable");
-            lastPageLi.addClass("disable");
+            nextPageLi.addClass("disabled");
+            lastPageLi.addClass("disabled");
         } else {
             lastPageLi.click(function () {
                 to_page(result.extend.pageInfo.pages);
